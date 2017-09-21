@@ -14,7 +14,7 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "prettify": "find app config tests -name '*.js' -type f | xargs prettier --write"
+    "prettify": "find app config tests -name '*.js' -type f | xargs prettier --write .eslintrc.js"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -38,6 +38,7 @@
     "ember-source": "~2.15.0",
     "ember-welcome-page": "^3.0.0",
     "eslint-config-prettier": "^2.5.0",
+    "eslint-plugin-ember-suave": "^1.0.0",
     "eslint-plugin-prettier": "^2.3.1",
     "loader.js": "^4.2.3",
     "prettier": "^1.7.0"
