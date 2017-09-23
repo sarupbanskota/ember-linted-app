@@ -14,7 +14,12 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "prettify": "find app config tests -name '*.js' -type f | xargs prettier --write .eslintrc.js"
+    "precommit": "lint-staged",
+    "prettify":
+      "find app config tests -name '*.js' -type f | xargs prettier --write"
+  },
+  "lint-staged": {
+    "*.{js,json}": ["prettier --write", "git add"]
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -40,6 +45,8 @@
     "eslint-config-prettier": "^2.5.0",
     "eslint-plugin-ember-suave": "^1.0.0",
     "eslint-plugin-prettier": "^2.3.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.2.2",
     "loader.js": "^4.2.3",
     "prettier": "^1.7.0"
   },
